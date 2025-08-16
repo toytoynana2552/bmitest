@@ -1,6 +1,5 @@
 import streamlit as st
 
-from gtts import gTTS
 import io
 
 st.set_page_config(page_title='BODY MESS INDEX',page_icon='🦊')
@@ -44,15 +43,8 @@ if st.button('คำนวณ'):
         st.image('C:/aipython/BMI5.png')
         
    
-    tts = gTTS(text=word, lang='th')
-    mp3_fp = io.BytesIO()
-    tts.write_to_fp(mp3_fp)
-    mp3_fp.seek(0)
-    st.audio(mp3_fp, format='aidio/mp3')
-import streamlit as st
-import requests
-from pathlib import Path
 
+   
 st.title("Botnoi Voice API Demo")
 
 API_URL = "https://api-voice.botnoi.ai/openapi/v1/generate_audio"
